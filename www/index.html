@@ -2,9 +2,10 @@
 <head>
   <script src="vendor/angular/angular.min.js"></script>
   <script src="js/app.js"></script>
+  <LINK href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body ng-app='sass'>
   <div ng-controller='mainController as main'>
-    {{ main.hello }}
+    <button ng-repeat="color in main.colors" ng-class="'button-' + color">{{ color}}</button>
   </div>
 </body>

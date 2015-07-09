@@ -9,3 +9,6 @@ In this branch you will have just the basic tools needed to complete this tutori
     gulp watch
     
 This will automatically compile your scss files for you. If at some point the watch breaks down, just run the command again.
+
+# Step 1
+Before we start doing some serious Sass, let's just settle in and adjust to the idea that Sass is just CSS on steroids. In order to do so, head over to main.scss and add a 

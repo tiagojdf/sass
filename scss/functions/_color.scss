@@ -1,0 +1,28 @@
+@function contrastTextColor($backgroundColor){
+  @if (lightness($backgroundColor) < 50%){
+    @return white;
+  } @else {
+    @return black;
+  }
+}
+
+.button-black{
+  background-color: black;
+  color: contrastTextColor(black);
+}
+.button-white{
+  background-color: white;
+  color: contrastTextColor(white);
+}
+.button-blue{
+  background-color: blue;
+  color: contrastTextColor(blue);
+}
+.button-red{
+  background-color: red;
+  color: contrastTextColor(red);
+}
+.button-yellow{
+  background-color: yellow;
+  color: contrastTextColor(yellow);
+}
