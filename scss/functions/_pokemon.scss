@@ -1,0 +1,28 @@
+%pokemon{
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin pokemon-image($number){
+  background-image: url(http://randompokemon.com/sprites/animated/#{$number}.gif);
+}
+$colors: (
+  1: green,
+  2: darken( green, 10%),
+  3: darken( green, 20%),
+  4: red,
+  5: darken( red, 10%),
+  6: darken( red, 20%),
+  7: blue,
+  8: darken(blue, 10%),
+  9: darken(blue, 20%),
+);
+@each $index, $color in $colors {
+  .pokemon-#{$index}{
+    @extend %pokemon;
+    @include pokemon-image($index);
+    background-color: $color;
+    color: contrastTextColor($color);
+  }
+}
