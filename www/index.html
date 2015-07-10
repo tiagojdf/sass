@@ -8,5 +8,6 @@
   <div ng-controller='mainController as main'>
     <button ng-repeat="color in main.colors" ng-class="'button-' + color">{{ color}}</button>
     <div ng-repeat="i in [1,2,3,4,5,6,7,8,9] track by $index" ng-class="'pokemon-' + i"></div>
+    <div ng-repeat="i in main.pokemons track by $index" ng-class="'pokemon-image-' + i"></div>
   </div>
 </body>

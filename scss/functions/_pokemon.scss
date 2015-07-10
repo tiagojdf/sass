@@ -7,6 +7,7 @@
 @mixin pokemon-image($number){
   background-image: url(http://randompokemon.com/sprites/animated/#{$number}.gif);
 }
+
 $colors: (
   1: green,
   2: darken( green, 10%),
@@ -24,5 +25,14 @@ $colors: (
     @include pokemon-image($index);
     background-color: $color;
     color: contrastTextColor($color);
+  }
+}
+
+@for $i from 1 through 151 {
+  .pokemon-image-#{$i}{
+    @extend %pokemon;
+    @include pokemon-image($i);
+    display: block;
+    float: left;
   }
 }
